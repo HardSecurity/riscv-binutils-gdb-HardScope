@@ -683,17 +683,15 @@ const struct riscv_opcode riscv_opcodes[] =
 /* scope enforcement */
 #define MASK_SIMM ENCODE_STYPE_IMM(-1U)
 {"sbent",     "Xscen",   "",     MATCH_XSCEN_SBENT, MASK_XSCEN_SBENT, match_opcode, 0 },
-{"srbse",     "Xscen",   "q(s)", MATCH_XSCEN_SRBSE, MASK_XSCEN_SRBSE, match_opcode, 0 },
-{"srbse",     "Xscen",   "s",    MATCH_XSCEN_SRBSE, MASK_XSCEN_SRBSE | MASK_SIMM, match_opcode, INSN_ALIAS },
-{"srlmt",     "Xscen",   "q(s)", MATCH_XSCEN_SRLMT, MASK_XSCEN_SRLMT, match_opcode, 0 },
-{"srlmt",     "Xscen",   "s",    MATCH_XSCEN_SRLMT, MASK_XSCEN_SRLMT | MASK_SIMM, match_opcode, INSN_ALIAS },
+{"sradd",     "Xscen",   "s,q(t)", MATCH_XSCEN_SRADD, MASK_XSCEN_SRADD, match_opcode, 0 },
+{"sradd",     "Xscen",   "s,t",    MATCH_XSCEN_SRADD, MASK_XSCEN_SRADD | MASK_SIMM, match_opcode, INSN_ALIAS },
+{"srdda",     "Xscen",   "q(s),t", MATCH_XSCEN_SRDDA, MASK_XSCEN_SRDDA, match_opcode, 0 },
+{"srdda",     "Xscen",   "s,t",    MATCH_XSCEN_SRDDA, MASK_XSCEN_SRDDA | MASK_SIMM, match_opcode, INSN_ALIAS },
 {"srdlg",     "Xscen",   "q(s)", MATCH_XSCEN_SRDLG, MASK_XSCEN_SRDLG, match_opcode, 0 },
 {"srdlg",     "Xscen",   "s",    MATCH_XSCEN_SRDLG, MASK_XSCEN_SRDLG | MASK_SIMM, match_opcode, INSN_ALIAS },
-{"srdlgm",    "Xscen",   "q(s)", MATCH_XSCEN_SRDLGM, MASK_XSCEN_SRDLGM, match_opcode, 0 },
-{"srdlgm",    "Xscen",   "s",    MATCH_XSCEN_SRDLGM, MASK_XSCEN_SRDLGM | MASK_SIMM, match_opcode, INSN_ALIAS },
+{"srdsub",    "Xscen",   "s,q(t)", MATCH_XSCEN_SRDSUB, MASK_XSCEN_SRDSUB, match_opcode, 0 },
+{"srdsub",    "Xscen",   "s,t",    MATCH_XSCEN_SRDSUB, MASK_XSCEN_SRDSUB | MASK_SIMM, match_opcode, INSN_ALIAS },
 {"sbxit",     "Xscen",   "",     MATCH_XSCEN_SBXIT, MASK_XSCEN_SBXIT, match_opcode, 0 },
-{"srsub",     "Xscen",   "s,q(t)", MATCH_XSCEN_SRSUB, MASK_XSCEN_SRSUB, match_opcode, 0 },
-{"srsub",     "Xscen",   "s,t",    MATCH_XSCEN_SRSUB, MASK_XSCEN_SRSUB | MASK_SIMM, match_opcode, INSN_ALIAS },
 
 /* Terminate the list.  */
 {0, 0, 0, 0, 0, 0, 0}
